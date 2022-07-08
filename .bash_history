@@ -1,0 +1,3 @@
+rails -v
+exit
+exit
