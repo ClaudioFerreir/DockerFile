@@ -3,4 +3,49 @@
  \  \  / (.-' |(  (   )|  |  |(.-'
   `' `'   `--'` `-'`-' '  '  ` `--'
 
+This container has installed:
+- VIM
+- RVM (Ruby 3.7.2)
+- Rails 6.1.4.7
 
+Access the container ssh by user app:
+$ app@localhost -p <port>
+# Password is app
+
+For the first Rails project has install:
+
+- Nodejs
+  - Eg. Install Node js using NVM
+    - Step 1 - Install nvm
+      $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+    - Step 2 - Restart your terminal for your changes to take effect
+    - Step 3 - Check that nvm is installed
+      # If you get a version number back like 0.35.3, then you know nvm was successfully installed.
+    - Step 4 - Install Nodejs version 14.4
+      $ nvm install 14.4.0
+      # If you ever need to switch node versions, you can simply run nvm use <version-number> , for example nvm use v12.18.1.
+      # To list the different node versions you have installed with nvm, run nvm ls.
+
+- Yarn
+  - Step 1 - Install yarn
+    $ npm install -g yarn
+  - Step 2 - Check that nvm is installed
+    $ yarn --version
+
+- Postgresql (if you need to use it)
+  - Install Postgresql
+  $ sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+  $ sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+  $ sudo apt-get update
+  $ sudo apt-get install postgresql-common
+  $ sudo apt-get install postgresql-9.5 libpq-dev
+  - Configuring user for Postgresql (Change username in the command above for the user name that you wish create)
+  $ sudo -u postgres createuser username
+
+Install rails project
+
+Into your rails project dont forget to run a bundle
+$ bundle
+
+For access the localhost:3000 in your browse
+$ rails s -b 0.0.0.0 -p 3000
