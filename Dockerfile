@@ -33,7 +33,7 @@ RUN /bin/bash -l -c "rvm install 3.0.0"
 RUN /bin/bash -l -c "echo 'gem: --no-ri --no-rdoc' > ~/.gemrc"
 RUN /bin/bash -l -c "gem install bundler --no-document"
 RUN /bin/bash -l -c "gem install sprockets -v 3.7.2"
-RUN /bin/bash -l -c "gem install rails -v 6.1.0"
+RUN /bin/bash -l -c "gem install rails -v 6.1.4.7"
 
 USER root
 
